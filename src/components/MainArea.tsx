@@ -21,13 +21,15 @@ function MainArea() {
 function BookGrid() {
   return (
     <div className="flex h-[1000px] pl-16 pr-8 overflow-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 grid grid-flow-rows grid-cols-4 gap-x-4 gap-y-12">
-      {new Array(50).fill(null).map((_) => (
-        <BookCard
-          image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg"
-          title="The Night Shift"
-          author="Alex Finlay"
-        />
-      ))}
+      <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {new Array(50).fill(null).map((_) => (
+          <BookCard
+            image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg"
+            title="The Night Shift"
+            author="Alex Finlay"
+          />
+        ))}
+      </div>
     </div>
   );
 }
